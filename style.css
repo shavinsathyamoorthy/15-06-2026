@@ -13,10 +13,30 @@ body {
 
 nav {
     position: fixed;
-    background: rgba(255, 255, 255, 0.7);
+    background: linear-gradient(
+    135deg, 
+    #737373 0%, 
+    #f5f5f5 25%, 
+    #ffffff 50%, 
+    #b3b3b3 75%, 
+    #595959 100%);
+    background-size: 300% 300%;
+    animation: goldFlow 6s ease infinite;
     backdrop-filter: blur(10px);
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes goldFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .navbar {
@@ -42,6 +62,7 @@ img {
 .logo h1 {
     font-size: 40px;
     font-weight: 700;
+    color: black;
 }
 
 nav ul {
